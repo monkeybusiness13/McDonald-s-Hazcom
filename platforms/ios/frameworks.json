@@ -1,0 +1,6 @@
+{
+    "AudioToolbox.framework": 1,
+    "libz.dylib": 1,
+    "CFNetwork.framework": 1,
+    "SystemConfiguration.framework": 1
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" type="text/css" href="css/index.css" />
+            <script src="cordova.js"></script>
+            <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+                <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+                <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+                </head>
+    <body>
+        
+        <div data-role="page" id="pageone">
+            <div data-role="header" class="header">
+                <h1>+ McDonald's Hazcom</h1>
+            </div>
+            
+            <div data-role="main" class="ui-content main-container">
+                <div class="row">
+                    <a href="#pagetwo">
+                        <div class="col-2 home-icons-wrap">
+                            <img src="img/file-icon.jpg" alt="File Icon" />
+                            <br/>
+                            MSDS Sheets
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <div data-role="page" id="pagetwo">
+            <div data-role="header" class="header">
+                <h1>+ McDonald's Hazcom</h1>
+            </div>
+            
+            <div data-role="main" class="ui-content main-container">
+                <div class="search-container">
+                    <form>
+                        <input data-type="search" id="searchForCollapsibleSetChildren">
+                            </form>
+                </div>
+                <div class="row">
+                    <h2>MSDS Sheets</h2>
+                    <br/>
+                    
+                    <div data-role="collapsibleset" data-theme="a" data-content-theme="b" class="sheet-accordian-container" id="divBrandProductAccordion">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <script type="text/javascript" src="js/index.js"></script>
+    </body>
+</html>

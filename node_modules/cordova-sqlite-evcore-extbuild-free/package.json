@@ -1,0 +1,66 @@
+{
+  "_from": "cordova-sqlite-evcore-extbuild-free",
+  "_id": "cordova-sqlite-evcore-extbuild-free@0.9.9",
+  "_inBundle": false,
+  "_integrity": "sha512-69U0JBhtBJd2QLNouaCuhfe2jv9HNClaPYRa+HcNmvdLqt/+DyIrpjBPtwYAsqNe9pxuR9oK1z/umuXw2IJSUw==",
+  "_location": "/cordova-sqlite-evcore-extbuild-free",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-sqlite-evcore-extbuild-free",
+    "name": "cordova-sqlite-evcore-extbuild-free",
+    "escapedName": "cordova-sqlite-evcore-extbuild-free",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-sqlite-evcore-extbuild-free/-/cordova-sqlite-evcore-extbuild-free-0.9.9.tgz",
+  "_shasum": "c9d14c26fb30e20823b09d9e0d44dd4bede5fee1",
+  "_spec": "cordova-sqlite-evcore-extbuild-free",
+  "_where": "/Users/edkrause/hazcom",
+  "author": {
+    "name": "various"
+  },
+  "bugs": {
+    "url": "https://github.com/litehelpers/Cordova-sqlite-evcore-extbuild-free/issues"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-sqlite-evcore-extbuild-free",
+    "platforms": [
+      "android",
+      "ios",
+      "osx",
+      "windows"
+    ]
+  },
+  "deprecated": false,
+  "description": "Cordova/PhoneGap sqlite storage - free enterprise version with Android performance/memory improvements and extra features for PhoneGap Build",
+  "devDependencies": {
+    "shelljs": "^0.7.4"
+  },
+  "homepage": "https://github.com/litehelpers/Cordova-sqlite-evcore-extbuild-free",
+  "keywords": [
+    "sqlite",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-osx",
+    "cordova-windows"
+  ],
+  "license": "GPL-3.0 OR Commercial",
+  "name": "cordova-sqlite-evcore-extbuild-free",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/litehelpers/Cordova-sqlite-evcore-extbuild-free.git"
+  },
+  "scripts": {
+    "start": "node scripts/prepareSpec.js"
+  },
+  "version": "0.9.9"
+}

@@ -1,0 +1,253 @@
+/*
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    /* background-color:#E4E4E4;
+     background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+     background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+     background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+     background-image:-webkit-gradient(
+     linear,
+     left top,
+     left bottom,
+     color-stop(0, #A7A7A7),
+     color-stop(0.51, #E4E4E4)
+     );*/
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+/* Portrait layout (default) */
+.app {
+    background:url(../img/logo.png) no-repeat center top; /* 170px x 200px */
+    position:absolute;             /* position in the center of the screen */
+    left:50%;
+    top:50%;
+    height:50px;                   /* text area height */
+    width:225px;                   /* text area width */
+    text-align:center;
+    padding:180px 0px 0px 0px;     /* image height is 200px (bottom 20px are overlapped with text) */
+    margin:-115px 0px 0px -112px;  /* offset vertical: half of image height and text area height */
+    /* offset horizontal: half of text area width */
+}
+
+/* Landscape layout (with min-width) */
+@media screen and (min-aspect-ratio: 1/1) and (min-width:400px) {
+    .app {
+        background-position:left center;
+        padding:75px 0px 75px 170px;  /* padding-top + padding-bottom + text area = image height */
+        margin:-90px 0px 0px -198px;  /* offset vertical: half of image height */
+        /* offset horizontal: half of image width and text area width */
+    }
+}
+
+h1 {
+    font-size:24px;
+    margin:0px;
+    overflow:visible;
+    padding:0px;
+    text-align:center;
+}
+
+.event {
+    border-radius:4px;
+    -webkit-border-radius:4px;
+    color:#FFFFFF;
+    font-size:12px;
+    margin:0px 30px;
+    padding:2px 0px;
+}
+
+.event.listening {
+    background-color:#333333;
+    display:block;
+}
+
+.event.received {
+    background-color:#4B946A;
+    display:none;
+}
+
+@keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+@-webkit-keyframes fade {
+    from { opacity: 1.0; }
+    50% { opacity: 0.4; }
+    to { opacity: 1.0; }
+}
+
+.blink {
+    animation:fade 3000ms infinite;
+    -webkit-animation:fade 3000ms infinite;
+}
+
+
+/* HEADER */
+.header{
+    color:#ffffff !important;
+    background:#4e0c21 !important;
+    padding:15px 10px !important;
+    font-weight: 700 !important;
+    font-size: 21px !important;
+    text-shadow: none;
+}
+
+.search-container{
+    background: #eeeeee;
+    padding: 18px 10px 18px 10px;
+    margin: auto;
+}
+.search-container input{
+    border-color: #dfe0e6;
+    width: 88%;
+    height: 32px;
+    font-size:18px;
+    border-radius:15px;
+}
+.home-icons-wrap{
+    border: 1px solid #e9e9ee;
+    border-radius: 15px;
+    padding: 20px;
+    color: #c03d55;
+    text-align: center;
+    font-weight: 600;
+    font-size: 19px;
+}
+
+.col-2{
+    /*width:40%;*/
+}
+
+.row{
+    margin-top: 20px;
+    margin-left: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.btn-search-icon {
+    width: 71px;
+    height:25px;
+    background: transparent;
+    border: none;
+    position: absolute;
+    margin-left: -65px;
+    margin-top:10px;
+}
+.btn-search-icon img {
+    height: 100%;
+}
+
+.footer{
+    width: 100%;
+    position: fixed !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: 1px solid rgba(255,255,255,.2);
+    box-shadow: 0 0 3px rgba(0,0,0,.3) !important;
+    z-index: 9999;
+    background: #f3f3f3;
+}
+
+ul.columns-2 li{
+    width: 50%;
+    display: inline-block;
+    float: left;
+    text-align: center;
+}
+
+ul.columns-2 li a{
+    display: block;
+    position: relative;
+    text-indent: -9999px;
+    z-index: 999;
+    border-right: 1px solid rgba(255,255,255,.2);
+    height: 10px;
+}
+
+.footer ul li > a::before{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    display: inline-block;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    vertical-align: -.125em;
+    font-weight: 900;
+    line-height: inherit;
+    vertical-align: baseline;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    text-indent: 0;
+    display: block;
+    cursor: pointer;
+}
+
+.footer ul li.footer-search-li > a::before {
+    content: url('../img/magnifying-glass-icon.png');
+}
+
+
+
+
+/***** JQUERY MOBILE EDITS *****/
+.ui-header .ui-title, .ui-footer .ui-title {
+    margin: 0 !important;
+    overflow: unset !important;
+}
+.ui-content {
+    padding: 0em !important;
+}
+.sheet-accordian-container.ui-collapsible-set.ui-group-theme-a.ui-corner-all{
+    width:95%;
+}
+/***** JQUERY MOBILE EDITS *****/
+
+
+
+/**** ACCORDION ****/
+.accordionBrandName{
+    color: #4e0c21!important;
+}
+
+/**** ACCORDION ****/
